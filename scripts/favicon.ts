@@ -32,6 +32,7 @@ async function main() {
           // consola.info(`${id}: icon exists. skip.`)
           return
         }
+        if (source.icon) return
         if (!source.home) return
         await downloadImage(`https://icons.duckduckgo.com/ip3/${source.home.replace(/^https?:\/\//, "").replace(/\/$/, "")}.ico`, icon, id)
       } catch (e) {
