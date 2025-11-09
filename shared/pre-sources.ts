@@ -64,8 +64,21 @@ export const originSources = {
       },
     },
   },
+  "jimmysong-blog": {
+    name: "Jimmy Song",
+    color: "blue",
+    home: "https://jimmysong.io",
+    column: "tech",
+    type: "hottest",
+  },
+  "jimmysong-ai": {
+    name: "AI 资源库",
+    color: "purple",
+    home: "https://jimmysong.io/ai",
+    column: "tech",
+    type: "hottest",
+  },
 } as const satisfies Record<string, OriginSource>
-
 export function genSources() {
   const _: [SourceID, Source][] = []
 

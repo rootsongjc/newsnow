@@ -71,5 +71,21 @@
     "color": "gray",
     "interval": 600000,
     "title": "Today"
+  },
+  "jimmysong-blog": {
+    "name": "Jimmy Song",
+    "type": "hottest",
+    "column": "tech",
+    "home": "https://jimmysong.io",
+    "color": "blue",
+    "interval": 600000
+  },
+  "jimmysong-ai": {
+    "name": "AI 资源库",
+    "type": "hottest",
+    "column": "tech",
+    "home": "https://jimmysong.io/ai",
+    "color": "purple",
+    "interval": 600000
   }
 }
