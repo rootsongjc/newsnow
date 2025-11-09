@@ -114,7 +114,7 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
             href={sources[id].home}
             title={sources[id].desc}
             style={{
-              backgroundImage: `url(/icons/${id.split("-")[0]}.png)`,
+              backgroundImage: `url(${sources[id].icon || `/icons/${id.split("-")[0]}.png`})`,
             }}
           />
           <span className="flex flex-col">
