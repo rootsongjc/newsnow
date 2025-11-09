@@ -4,23 +4,30 @@ import type { NewsItem } from "@shared/types"
 const parser = new XMLParser()
 
 async function getRss(url: string) {
-  const xmlContent: string = await myFetch(url)
-  const result = parser.parse(xmlContent)
-  const items = result?.rss?.channel?.item || []
+  console.log(`Fetching RSS feed from: ${url}`)
+  try {
+    const xmlContent: string = await myFetch(url)
+    const result = parser.parse(xmlContent)
+    const items = result?.rss?.channel?.item || []
 
-  const news: NewsItem[] = items.map((item: any) => {
-    return {
-      id: item.guid || item.link,
-      title: item.title,
-      url: item.link,
-      pubDate: item.pubDate,
-      extra: {
-        hover: item.description,
-      },
-    }
-  }).filter(Boolean)
+    const news: NewsItem[] = items.map((item: any) => {
+      return {
+        id: item.guid || item.link,
+        title: item.title,
+        url: item.link,
+        pubDate: item.pubDate,
+        extra: {
+          hover: item.description,
+          icon: "https://jimmysong.io/favicon.png",
+        },
+      }
+    }).filter(Boolean)
 
-  return news
+    return news
+  } catch (error) {
+    console.error(`Error fetching RSS feed from: ${url}`, error)
+    return []
+  }
 }
 
 const jimmysongBlog = defineSource(async () => {
