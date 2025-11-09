@@ -18,7 +18,6 @@ async function getRss(url: string) {
         pubDate: item.pubDate,
         extra: {
           hover: item.description,
-          icon: "https://jimmysong.io/favicon.png",
         },
       }
     }).filter(Boolean)

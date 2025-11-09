@@ -70,6 +70,7 @@ export const originSources = {
     home: "https://jimmysong.io",
     column: "tech",
     type: "hottest",
+    icon: "https://jimmysong.io/favicon.png",
   },
   "jimmysong-ai": {
     name: "AI 资源库",
@@ -77,6 +78,7 @@ export const originSources = {
     home: "https://jimmysong.io/ai",
     column: "tech",
     type: "hottest",
+    icon: "https://jimmysong.io/favicon.png",
   },
 } as const satisfies Record<string, OriginSource>
 export function genSources() {
@@ -91,6 +93,7 @@ export function genSources() {
       column: source.column,
       home: source.home,
       color: source.color ?? "primary",
+      icon: source.icon,
       interval: source.interval ?? Time.Default,
     }
     if (source.sub && Object.keys(source.sub).length) {

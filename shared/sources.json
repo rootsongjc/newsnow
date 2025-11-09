@@ -78,6 +78,7 @@
     "column": "tech",
     "home": "https://jimmysong.io",
     "color": "blue",
+    "icon": "https://jimmysong.io/favicon.png",
     "interval": 600000
   },
   "jimmysong-ai": {
@@ -86,6 +87,7 @@
     "column": "tech",
     "home": "https://jimmysong.io/ai",
     "color": "purple",
+    "icon": "https://jimmysong.io/favicon.png",
     "interval": 600000
   }
 }
